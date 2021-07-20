@@ -40,4 +40,36 @@ class Meal {
   final bool isVegetarian;
   final Complexity complexity;
   final Cost cost;
+
+  String get complexityText {
+    switch (complexity) {
+      case Complexity.Simple:
+        return 'Simple';
+
+      case Complexity.Medium:
+        return 'Normal';
+
+      case Complexity.Difficult:
+        return 'Hard';
+
+      default:
+        return 'Unknow';
+    }
+  }
+
+  String get costText {
+    switch (cost) {
+      case Cost.Cheap:
+        return 'Cheap';
+
+      case Cost.Fair:
+        return 'Fair';
+
+      case Cost.Expensive:
+        return 'Expensive';
+
+      default:
+        return 'Unknow';
+    }
+  }
 }
